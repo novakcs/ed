@@ -1,0 +1,63 @@
+run:
+VECES QUE SE VA A EJECUTAR CADA TEST PARA LUEGO SACAR LA MEDIA Y ASÍ QUE RESULTE MÁS FIABLE: 1000
+
+Test                                                        ArrayList        LinkedList 
+Test 1: Agregar un elemento al final                        0,001090          0,000143      milisegundos.
+Test 2: Agregar un elemento al inicio                       0,000666          0,000256      milisegundos.
+Test 3: Agregar un elemento a mitad                         0,000330          0,001353      milisegundos.
+Test 4: Borrar el último elemento                           0,000061          0,000072      milisegundos.
+Test 5: Borrar el primer elemento                           0,000250          0,000069      milisegundos.
+Test 6: Borrar elemento central                             0,000176          0,000920      milisegundos.
+Test 7: Borrar el último elemento por valor                 0,009801          0,007481      milisegundos.
+Test 8: Borrar el primer elemento por valor                 0,000273          0,000074      milisegundos.
+Test 9: Borrar elemento central por valor                   0,000683          0,001440      milisegundos.
+Test 10: Vaciar completamente                               0,002442          0,003097      milisegundos.
+Test 11: Buscar con funciones de la lista                   0,009969          0,011276      milisegundos.
+Test 12: Buscar con funcion implementada                    0,010679          0,341407      milisegundos.
+Test 13: Buscar de forma binaria                            0,000850          0,004720      milisegundos.
+
+
+
+
+VECES QUE SE VA A EJECUTAR CADA TEST PARA LUEGO SACAR LA MEDIA Y ASÍ QUE RESULTE MÁS FIABLE: 1000
+
+Tipo de búsqueda                                 Tiempo         Comparaciones          Accesos         Swaps
+Bubble sort DESORDENADA                       4,121590 ms          499500              1980193        245298
+Bubble sort ORDENADA                          2,393384 ms          499500               999001             0
+Bubble sort INVERSA                           4,792770 ms          499500              2997001        499500
+Bubble sort IGUALES                           2,387143 ms          499500               999001             0
+------------------------------------------------------------------------------------------------------------
+Selection sort DESORDENADA                    0,998771 ms          500500               511094           993
+Selection sort ORDENADA                       0,966234 ms          500500               501501             0
+Selection sort INVERSA                        1,034276 ms          500500               753501           500
+Selection sort IGUALES                        0,959973 ms          500500               501501             0
+------------------------------------------------------------------------------------------------------------
+Insertion sort DESORDENADA                    1,613475 ms          497932               748400        248469
+Insertion sort ORDENADA                       0,010400 ms             999                 2998             0
+Insertion sort INVERSA                        3,162644 ms          999000              1500499        499500
+Insertion sort IGUALES                        0,008960 ms             999                 2998             0
+------------------------------------------------------------------------------------------------------------
+Quick sort DESORDENADA                        0,109123 ms           22542                24401          2709
+Quick sort ORDENADA                           0,035730 ms           15970                14971           999
+Quick sort INVERSA                            0,039686 ms           16967                16966          1498
+Quick sort IGUALES                            0,061673 ms           23173                30264          5044
+------------------------------------------------------------------------------------------------------------
+Merge sort DESORDENADA                        0,260386 ms           34284                80240             0
+Merge sort ORDENADA                           0,136546 ms           21839                59696             0
+Merge sort INVERSA                            0,146304 ms           32039                75052             0
+Merge sort IGUALES                            0,138271 ms           21839                59696             0
+
+
+Tiempos de búsqueda                              Tiempo        Comparaciones             Accesos 
+BINARIA                                       0,000880 ms              21                   19
+SECUENCIAL                                    0,012473 ms             951                  951
+
+
+VAMOS A COMPROBAR QUE FUNCIONAN BIEN TODOS LOS ALGORITMOS.
+Método                       Aleatoria      Ordenada     Inversa      Iguales
+BUBBLE SORT:                     OK            OK           OK           OK
+SELECTION SORT:                  OK            OK           OK           OK
+INSERTION SORT:                  OK            OK           OK           OK
+QUICK SORT:                      OK            OK           OK           OK
+MERGE SORT:                      OK            OK           OK           OK
+BUILD SUCCESSFUL (total time: 24 seconds)
