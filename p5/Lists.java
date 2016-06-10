@@ -453,36 +453,143 @@ public class Lists {
         
         System.out.print("Test 11: Buscar con funciones de la lista                   ");  
         imprimir_tiempos(tiempo_array, tiempo_linked, df);
-        
+
         // Test 12
+        numero = miarraylist.get(0);
         tiempo_inicio = System.nanoTime();
         for (int i = 0; i < veces; i++) {
             buscar_implementado_arraylist(numero); 
         }
         tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
         tiempo_inicio = System.nanoTime();
+        numero = milinkedlist.get(0);
         for (int i = 0; i < veces; i++) {
             buscar_implementado_linkedlist(numero);
         }
         tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
         
-        System.out.print("Test 12: Buscar con funcion implementada                    ");  
+        System.out.print("Test 12: Buscar con funcion implementada  al inicio         ");  
         imprimir_tiempos(tiempo_array, tiempo_linked, df);
         
-        // Test 13        
+        // Test 13
+        numero = miarraylist.get(miarraylist.size() /2);
         tiempo_inicio = System.nanoTime();
+        for (int i = 0; i < veces; i++) {
+            buscar_implementado_arraylist(numero); 
+        }
+        tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
+        tiempo_inicio = System.nanoTime();
+        numero = milinkedlist.get(milinkedlist.size()/2);
+        for (int i = 0; i < veces; i++) {
+            buscar_implementado_linkedlist(numero);
+        }
+        tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
+        
+        System.out.print("Test 13: Buscar con funcion implementada a mitad            ");  
+        imprimir_tiempos(tiempo_array, tiempo_linked, df);
+             
+        // Test 14
+        numero = miarraylist.get(miarraylist.size()-1);
+        tiempo_inicio = System.nanoTime();
+        for (int i = 0; i < veces; i++) {
+            buscar_implementado_arraylist(numero); 
+        }
+        tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
+        tiempo_inicio = System.nanoTime();
+        numero = milinkedlist.get(milinkedlist.size()-1);
+        for (int i = 0; i < veces; i++) {
+            buscar_implementado_linkedlist(numero);
+        }
+        tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
+        
+        System.out.print("Test 14: Buscar con funcion implementada al final           ");  
+        imprimir_tiempos(tiempo_array, tiempo_linked, df);
+        
+        // Test 15      
+        tiempo_inicio = System.nanoTime();
+        numero = miarraylist.get(0);
         for (int i = 0; i < veces; i++) {
             busqueda_binaria_arraylist(numero); 
         }
         tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
         tiempo_inicio = System.nanoTime();
+        numero = milinkedlist.get(0);
         for (int i = 0; i < veces; i++) {
             busqueda_binaria_linkedlist(numero);
         }
         tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
         
-        System.out.print("Test 13: Buscar de forma binaria                            ");  
+        System.out.print("Test 15: Buscar de forma binaria al inicio                  ");  
         imprimir_tiempos(tiempo_array, tiempo_linked, df);
+        
+        // Test 16
+        tiempo_inicio = System.nanoTime();
+        numero = miarraylist.get(miarraylist.size()/2);
+        for (int i = 0; i < veces; i++) {
+            busqueda_binaria_arraylist(numero); 
+        }
+        tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
+        tiempo_inicio = System.nanoTime();
+        numero = milinkedlist.get(miarraylist.size()/2);
+        for (int i = 0; i < veces; i++) {
+            busqueda_binaria_linkedlist(numero);
+        }
+        tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
+        
+        System.out.print("Test 16: Buscar de forma binaria al medio                   ");  
+        imprimir_tiempos(tiempo_array, tiempo_linked, df);
+        
+        // Test 17
+        tiempo_inicio = System.nanoTime();
+        numero = miarraylist.get(miarraylist.size()-1);
+        for (int i = 0; i < veces; i++) {
+            busqueda_binaria_arraylist(numero); 
+        }
+        tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
+        tiempo_inicio = System.nanoTime();
+        numero = milinkedlist.get(miarraylist.size()-1);
+        for (int i = 0; i < veces; i++) {
+            busqueda_binaria_linkedlist(numero);
+        }
+        tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
+        
+        System.out.print("Test 17: Buscar de forma binaria final                      ");  
+        imprimir_tiempos(tiempo_array, tiempo_linked, df);
+        
+         // Test 18
+        tiempo_inicio = System.nanoTime();
+        numero = 999999999;
+        for (int i = 0; i < veces; i++) {
+            buscar_implementado_arraylist(numero); 
+        }
+        tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
+        tiempo_inicio = System.nanoTime();
+
+        for (int i = 0; i < veces; i++) {
+            buscar_implementado_linkedlist(numero);
+        }
+        tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
+        
+        System.out.print("Test 18: Buscar con funcion implementada inexistente        ");  
+        imprimir_tiempos(tiempo_array, tiempo_linked, df);
+        
+        // Test 19
+        tiempo_inicio = System.nanoTime();
+
+        for (int i = 0; i < veces; i++) {
+            busqueda_binaria_arraylist(numero); 
+        }
+        tiempo_array = (System.nanoTime() - tiempo_inicio)/veces;
+        tiempo_inicio = System.nanoTime();
+
+        for (int i = 0; i < veces; i++) {
+            busqueda_binaria_linkedlist(numero);
+        }
+        tiempo_linked = (System.nanoTime() - tiempo_inicio)/veces;
+        
+        System.out.print("Test 19: Buscar de forma binaria inexistente                ");  
+        imprimir_tiempos(tiempo_array, tiempo_linked, df);
+        
         System.out.println();
     }
     
